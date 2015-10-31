@@ -1,0 +1,178 @@
+body{
+    font-family: Audiowide, sans-serif;
+    -webkit-print-color-adjust: exact;
+    background: url("images/fondo.jpg");
+}
+
+header, #formulario, #ev-add, #ev-del, #ev-edit, #calendario, footer{
+    background: rgba(255,255,255,0.8);
+}
+
+header{
+    border: outset 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    width: 1200px;
+    padding: 0px;
+    text-align: center;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+#formularios{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    /*background: blue;*/
+    width: 1200px; /* Cambiar **********/
+}
+
+form, #formulario{
+    margin-bottom: 20px;
+}
+
+input, select{
+    margin-right: 5px;
+}
+
+#formulario, #ev-add, #ev-del, #ev-edit{
+    height: 120px;
+    float: left;
+    border: outset 5px;
+    padding: 15px;
+    width: 500px;
+
+    /* Cambiar esto */
+    margin-right: 20px;
+    text-align: center;
+}
+
+footer{
+    border: outset 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding: 15px;
+    text-align: center;
+}
+
+footer span{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+#formulario{
+    margin-right: 20px;
+}
+
+#calendario{
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    /*background: grey;*/
+
+    width: 1150px;
+}
+
+.dummy{
+    clear: both;
+}
+
+.evento{
+    font-size: 13px;
+}
+
+.dia-titulo{
+    width: 150px;
+    height: 25px;
+    float: left;
+    /*border: solid 1px black;*/
+    margin: 1px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgba(32, 21, 0, 0.2);
+    padding: 2px;
+    padding-top: 6px;
+}
+
+.dia-vacio{
+    width: 150px;
+    height: 120px;
+    float: left;
+    /*border: solid 1px black;*/
+    margin: 1px;
+    visibility: hidden;
+    padding: 2px;
+}
+
+.dia{
+    /*border: solid 1px black;*/
+    width: 150px;
+    height: 120px;
+    float: left;
+    margin: 1px;
+    border-radius: 5px;
+    background-color: rgba(32, 21, 0, 0.15);
+    padding: 2px;
+}
+
+.dia-festivo{
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.rojo{
+    color: red;
+}
+
+.azul{
+    color: blue;
+}
+
+.verde{
+    color: green;
+}
+
+a[href^="mailto:"]::before{
+    font-family: fontawesome;
+    padding-right: 0.5em;
+    content: "\f0e0"
+}
+
+a[href^="https://twitter.com/"]::before{
+    font-family: fontawesome;
+    padding-right: 0.5em;
+    content: "\f099"
+}
+
+a[href^="http://es.linkedin.com/"]::before{
+    font-family: fontawesome;
+    padding-right: 0.5em;
+    content: "\f0e1"
+}
+
+@media print{
+    @page{
+        size: landscape;
+    }
+
+    header, #formulario, #eventos, footer{
+        display: none;
+    }
+
+    #calendario{
+        height: 100%;
+    }
+
+    .dia{
+        background-color: rgba(32, 21, 0, 0.1);
+    }
+}

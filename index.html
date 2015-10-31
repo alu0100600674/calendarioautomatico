@@ -1,0 +1,40 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Calendario automático</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="script.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Calendario automático</h1>
+        </header>
+        <div id="formularios">
+            <div id="formulario">
+                <h3>Generar calendario</h3>
+                <form method="get" onsubmit="generarCalendario()">
+                    <label for="elegirmes">
+                        <select id="elegirmes"></select>
+                    </label>
+                    <label for="elegiranyo">
+                        <select id=elegiranyo></select>
+                    </label>
+                    <input type="button" value="Generar" onclick="generarCalendario()"/>
+                </form>
+            </div>
+            <!--<div class="dummy"></div>-->
+            <div id="eventos"></div>
+            <div class="dummy"></div>
+        </div>
+        <div id="calendario"></div>
+        <footer>
+            <span>Jonay Suárez Armas</span>
+            <span><a href="mailto:alu0100600674@ull.edu.es">alu0100600674@ull.edu.es</a></span>
+            <span><a href="https://twitter.com/jonay_bta">@jonay_bta</a></span>
+            <span><a href="http://es.linkedin.com/pub/jonay-su%C3%A1rez-armas/50/745/577">LinkedIn</a></span>
+        </footer>
+    </body>
+</html>
