@@ -195,6 +195,12 @@ a[href^="http://es.linkedin.com/"]::before{
     content: "\f0e1"
 }
 
+a[href="http://alu0100600674.github.io/calendarioautomatico/manual"]::before{
+    font-family: fontawesome;
+    padding-right: 0.5em;
+    content: "\f02d"
+}
+
 @media print{
     @page{
         size: landscape;
