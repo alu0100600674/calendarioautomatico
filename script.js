@@ -194,7 +194,7 @@ function generarDatos(){
     var data = '';
 
     if(datos.length == 0){
-        notificar("No hay datos.", "No hay datos que generar. No se ha generado ningún calendarió aún.", "images/calendar_azul.png");
+        notificar("No hay datos.", "No hay datos que generar. No se ha generado ningún calendario aún.", "images/calendar_azul.png");
     }else{
         //data += 'autoCal:' + datos[0][0] + ':' + datos[0][1] + '\n';
         data += 'autoCal$' + datos[0][0] + '$' + datos[0][1];
