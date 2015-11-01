@@ -84,6 +84,10 @@ footer a{
     color: black;
 }
 
+#manual a{
+    color: rgb(150,0,0);
+}
+
 #formulario{
     margin-right: 20px;
 }
@@ -155,6 +159,22 @@ footer a{
 
 .verde{
     color: green;
+}
+
+dialog{
+    width: 500px;
+    height: 300px;
+    font-family: sans-serif;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 30px;
+    border: outset 5px;
+}
+
+#mostrardatosarea{
+    width: 450px;
+    height: 200px;
+    resize: none;
 }
 
 a[href^="mailto:"]::before{

@@ -32,11 +32,10 @@
         <header>
             <h1>Calendario automático</h1>
         </header>
-
         <div id="formularios">
             <div id="formulario">
                 <h3>Generar calendario</h3>
-                <form method="get" onsubmit="generarCalendario()">
+                <form>
                     <label for="elegirmes">
                         <select id="elegirmes"></select>
                     </label>
@@ -59,8 +58,9 @@
             <div class="dummy"></div>
         </div>
 
-        <div id="calendario"></div>
 
+
+        <div id="calendario"></div>
         <footer>
             <span>Jonay Suárez Armas</span>
             <span><a href="mailto:alu0100600674@ull.edu.es" target="_blank">alu0100600674@ull.edu.es</a></span>
@@ -68,6 +68,7 @@
             <span><a href="http://es.linkedin.com/pub/jonay-su%C3%A1rez-armas/50/745/577" target="_blank">LinkedIn</a></span>
             <span id="manual"><a href="http://alu0100600674.github.io/calendarioautomatico/manual" target="_blank">MANUAL DE USO</a></span>
         </footer>
+        <dialog id="mostrardatos"></dialog>
 
         <script src="script.js" charset="utf-8"></script>
     </body>

@@ -1,6 +1,5 @@
 var num_evento = 0;
 var datos = [];
-//var datos2 = [];
 
 Date.prototype.getDayEs = function() {
     return (this.getDay() == 0 ? 6 : this.getDay() -1 )
@@ -207,7 +206,12 @@ function generarDatos(){
             }
         }
 
-        alert("Guarda los datos siguiente en un fichero:\n\n" + data);
+        //alert("Guarda los datos siguiente en un fichero:\n\n" + data);
+        var ventana = document.getElementById("mostrardatos");
+        ventana.innerHTML = 'Guarda los datos siguiente en un fichero:<br><br>';
+        ventana.innerHTML += '<textarea id="mostrardatosarea" disabled>' + data + '</textarea><br><br>';
+        ventana.innerHTML += '<input type="button" onclick="cerrarDialogo()" value="Cerrar"/>'
+        ventana.showModal();
     }
 }
 
@@ -239,4 +243,8 @@ function notificar(t, b, i){
     Notification.requestPermission(function() {
         new Notification(title, options);
     });
+}
+
+function cerrarDialogo(){
+    document.getElementById("mostrardatos").close();
 }
