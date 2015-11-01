@@ -125,8 +125,8 @@ function anadirEvento(){
     dia.innerHTML += '<li id="ev' + ++num_evento + '" class="evento ' + color + '">' + texto + '</li>';
 
     var even = document.getElementById("ev" + num_evento).value;
-    document.getElementById("elegirevento").innerHTML += '<option id="deleven' + num_evento + '" value="' + num_evento + '">' + texto + '</option>';
-    document.getElementById("elegirevento2").innerHTML += '<option id="editeven' + num_evento + '" value="' + num_evento + '">' + texto + '</option>';
+    document.getElementById("elegirevento").innerHTML += '<option id="deleven' + num_evento + '" value="' + num_evento + '">' + 'Día ' + eleccion + ': ' + texto + '</option>';
+    document.getElementById("elegirevento2").innerHTML += '<option id="editeven' + num_evento + '" value="' + num_evento + '">' + 'Día ' + eleccion + ': ' + texto + '</option>';
 }
 
 function eliminarEvento(){
@@ -150,9 +150,11 @@ function editarEvento(){
     evento.innerHTML = texto;
     evento.setAttribute("class", "evento " + color)
 
+
     var deleven = document.getElementById("deleven" + eleccion);
-    deleven.innerHTML = texto;
+    var dia = deleven.innerHTML.split(':');
+    deleven.innerHTML = dia[0] + ': ' + texto;
 
     var editeven = document.getElementById("editeven" + eleccion);
-    editeven.innerHTML = texto;
+    editeven.innerHTML = dia[0] + ': ' + texto;
 }
