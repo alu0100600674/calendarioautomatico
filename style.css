@@ -40,6 +40,10 @@ input, select{
     margin-right: 5px;
 }
 
+#elegirevento, #elegirevento2{
+    width: 250px;
+}
+
 #formulario, #ev-add, #ev-del, #ev-edit{
     height: 120px;
     float: left;

@@ -44,61 +44,37 @@ function generarCalendario(){
 
     ev_add.innerHTML += '<h3>Añadir evento</h3>';
     ev_add.innerHTML += '<form id="anadirevento">';
-    ev_add.innerHTML += '<select id="elegirdia">';
-    ev_add.innerHTML += '</select>';
-    ev_add.innerHTML += '<select id="elegircolor">';
+    ev_add.innerHTML += '<select id="elegirdia"></select>';
+    ev_add.innerHTML += '<select id="elegircolor"></select>';
     var elegircolor = document.getElementById("elegircolor");
     elegircolor.innerHTML += '<option>Negro</option>';
     elegircolor.innerHTML += '<option value="azul">Azul</option>';
     elegircolor.innerHTML += '<option value="verde">Verde</option>';
     elegircolor.innerHTML += '<option value="rojo">Rojo</option>';
-    ev_add.innerHTML += '</select>';
     ev_add.innerHTML += '<input type="text" id="textoevento" pattern=".+" placeholder="Introduce tu evento"></input>';
-    ev_add.innerHTML += '<input type="button" value="Añadir evento" onclick="anadirEvento()"></input>';
+    ev_add.innerHTML += '<input type="button" value="Añadir" onclick="anadirEvento()"></input>';
     ev_add.innerHTML += '</form>';
 
     // Formulario para eliminar eventos
     ev_del.innerHTML += '<h3>Eliminar evento</h3>';
     ev_del.innerHTML += '<form id="eliminarevento">';
-    ev_del.innerHTML += '<select id="elegirevento">';
-    ev_del.innerHTML += '</select>';
-    ev_del.innerHTML += '<input type="button" value="Eliminar evento" onclick="eliminarEvento()"></input>';
+    ev_del.innerHTML += '<select id="elegirevento"></select>';
+    ev_del.innerHTML += '<input type="button" value="Eliminar" onclick="eliminarEvento()"></input>';
     ev_del.innerHTML += '</form>';
 
     // Formulario para editar eventos
     ev_edit.innerHTML += '<h3>Editar evento</h3>';
     ev_edit.innerHTML += '<form id="editarevento">';
-    ev_edit.innerHTML += '<select id="elegirevento2">';
+    ev_edit.innerHTML += '<select id="elegirevento2"></select>';
+    ev_edit.innerHTML += '<select id="elegircolor2"></select>';
+    var elegircolor2 = document.getElementById("elegircolor2");
+    elegircolor2.innerHTML += '<option>Negro</option>';
+    elegircolor2.innerHTML += '<option value="azul">Azul</option>';
+    elegircolor2.innerHTML += '<option value="verde">Verde</option>';
+    elegircolor2.innerHTML += '<option value="rojo">Rojo</option>';
     ev_edit.innerHTML += '<input type="text" id="textoeditado" pattern=".+" placeholder="Introduce el texto nuevo"></input>';
-    ev_edit.innerHTML += '</select>';
-    ev_edit.innerHTML += '<input type="button" value="Editar evento" onclick="editarEvento()"></input>';
+    ev_edit.innerHTML += '<input type="button" value="Editar" onclick="editarEvento()"></input>';
     ev_edit.innerHTML += '</form>';
-
-    /*ev.innerHTML = '';
-    ev.innerHTML += '<h3>Añadir evento</h3>';
-    ev.innerHTML += '<form id="anadirevento">';
-    ev.innerHTML += '<select id="elegirdia">';
-    ev.innerHTML += '</select>';
-    ev.innerHTML += '<input type="text" id="textoevento" pattern=".+" placeholder="Introduce tu evento"></input>';
-    ev.innerHTML += '<input type="button" value="Añadir evento" onclick="anadirEvento()"></input>';
-    ev.innerHTML += '</form>';
-
-    // Formulario para eliminar eventos
-    ev.innerHTML += '<h3>Eliminar evento</h3>';
-    ev.innerHTML += '<form id="eliminarevento">';
-    ev.innerHTML += '<select id="elegirevento">';
-    ev.innerHTML += '</select>';
-    ev.innerHTML += '<input type="button" value="Eliminar evento" onclick="eliminarEvento()"></input>';
-    ev.innerHTML += '</form>';
-
-    // Formulario para editar eventos
-    ev.innerHTML += '<h3>Editar evento</h3>';
-    ev.innerHTML += '<form id="editarevento">';
-    ev.innerHTML += '<select id="elegirevento2">';
-    ev.innerHTML += '<input type="text" id="textoeditado" pattern=".+" placeholder="Introduce el texto nuevo"></input>';
-    ev.innerHTML += '</select>';
-    ev.innerHTML += '<input type="button" value="Editar evento" onclick="editarEvento()"></input>';
-    ev.innerHTML += '</form>';*/
 
     // Generar de lunes a domingo
     for(var d = 0; d < 7; d++){
@@ -169,8 +145,10 @@ function eliminarEvento(){
 function editarEvento(){
     var texto = document.getElementById("textoeditado").value;
     var eleccion = document.getElementById("elegirevento2").value;
+    var color = document.getElementById("elegircolor2").value;
     var evento = document.getElementById("ev" + eleccion);
     evento.innerHTML = texto;
+    evento.setAttribute("class", "evento " + color)
 
     var deleven = document.getElementById("deleven" + eleccion);
     deleven.innerHTML = texto;
