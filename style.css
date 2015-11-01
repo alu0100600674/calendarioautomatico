@@ -44,6 +44,10 @@ input, select{
     width: 250px;
 }
 
+#datos{
+    width: 280px;
+}
+
 #formulario, #ev-add, #ev-del, #ev-edit{
     height: 120px;
     float: left;

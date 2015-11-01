@@ -32,6 +32,7 @@
         <header>
             <h1>Calendario automático</h1>
         </header>
+
         <div id="formularios">
             <div id="formulario">
                 <h3>Generar calendario</h3>
@@ -42,22 +43,31 @@
                     <label for="elegiranyo">
                         <select id=elegiranyo></select>
                     </label>
-                    <input type="button" value="Generar" onclick="generarCalendario()"/>
+                    <input type="button" value="Generar calendario" onclick="generarCalendario()"/>
                     <input type="button" name="imprimir" value="Imprimir" onclick="window.print();"/>
+                    <input type="button" value="Generar datos" onclick="generarDatos()"/>
                 </form>
+                <div id="form-datos">
+                    <form>
+                        <input type="textarea" id="datos" placeholder="Introduce los datos del calendario para recuperarlo.">
+                        <input type="button" value="Generar calendario" onclick="leerDatos()" />
+                    </form>
+                </div>
             </div>
             <!--<div class="dummy"></div>-->
             <div id="eventos"></div>
             <div class="dummy"></div>
         </div>
+
         <div id="calendario"></div>
+
         <footer>
             <span>Jonay Suárez Armas</span>
             <span><a href="mailto:alu0100600674@ull.edu.es">alu0100600674@ull.edu.es</a></span>
             <span><a href="https://twitter.com/jonay_bta">@jonay_bta</a></span>
             <span><a href="http://es.linkedin.com/pub/jonay-su%C3%A1rez-armas/50/745/577">LinkedIn</a></span>
         </footer>
-
+        
         <script src="script.js" charset="utf-8"></script>
     </body>
 </html>
